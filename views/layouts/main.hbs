@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Ecole des Sciences de Musanze</title>
+</head>
+<body>
+    {{> _nav}}
+    
+    <div class="menu-btn">
+        <i class="material-icons">apps</i>
+    </div>
+
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    {{> _footer}}
+
+    <script>
+      document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.right-menu').classList.toggle('show'));
+    </script>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script> 
+</body>
+</html>
